@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main- entry point 
+ * main- entry point
  *
  * Description: prints all pssible diff comb of 3 digits
  *
