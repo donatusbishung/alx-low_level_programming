@@ -3,9 +3,7 @@
 /**
  * main- entry point
  *
- * Descripton: program prints all possible 
- *
- * combinations of single-digits numbers
+ * Descripton: program prints single combo
  *
  * Return: Always 0 (Success)
  */
