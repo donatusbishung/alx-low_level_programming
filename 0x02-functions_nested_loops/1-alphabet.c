@@ -3,10 +3,12 @@
 /**
  * main- print alphabet letters
  *
- * Return: Always 0
+ * Description: program print_alphabets
+ *
+ * Return: void
  */
 
-void print_alphabet(void)
+void print_alphabet(void) //print_alphabet
 {
 	int i;
 
