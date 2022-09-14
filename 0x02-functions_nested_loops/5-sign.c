@@ -1,22 +1,29 @@
 #include "main.h"
 
 /**
- * _isalpha - entry
+ * print_sign - entry
  *
- * @c: character to be treated
+ *@n: integer to be printed
  *
- * Return: 1 is character is alphabet, 0 otherwise.
+ * Return: 1 if n is positive, -1 if n is negative, o if n is zero
  */
 
-int _isalpha(int c)
+int print_sign(int n)
 {
-	if ((c >= 'a'; c <= 'z'; c++) || (c >= 'A'; && c <= 'z'; c++))
+	if (n == 0)
 	{
+		_putchar('0');
+		return (0);
+	}
+	else if (n > 0)
+	{
+		_putchar('+');
 		return (1);
 	}
 	else
 	{
-		return (0);
+		_putchar('-');
+		return (-1);
 	}
 	_putchar('\n');
 }
