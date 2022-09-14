@@ -10,9 +10,8 @@
 
 int print_last_digit(int number)
 {
-	if (number % 100)
 	{
-		return (number);
+		return (number % 100);
 	}
 	_putchar('\n');
 }
