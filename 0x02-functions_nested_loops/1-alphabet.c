@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * main- print alphabet letters
+ * print_alphabet- print alphabet letters
  *
  * Description: program print_alphabets
  *
  * Return: void
  */
 
-void print_alphabet(void) //print_alphabet
+void print_alphabet(void)
 {
 	int i;
 
