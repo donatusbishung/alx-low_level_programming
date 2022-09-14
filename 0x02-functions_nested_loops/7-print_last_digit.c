@@ -10,8 +10,5 @@
 
 int print_last_digit(int number)
 {
-	{
-		return (number % 100);
-	}
-	_putchar('\n');
+	return (number % 100);
 }
