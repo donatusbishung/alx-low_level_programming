@@ -15,7 +15,7 @@ void times_table(void)
 	{
 		for (stop = 0; stop <= 9; stop++)
 		{
-		int result = start * stop;
+		int result = stop * start;
 
 		if (start == 0)
 			printf("%i", start);
