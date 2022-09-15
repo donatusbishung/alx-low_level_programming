@@ -1,25 +1,29 @@
 #include "main.h"
 
 /**
- * jack_bauer - entry
+ * jack_bauer - entry point
  *
- * Return: Always (0).
+ * Return: void
  */
-
 void jack_bauer(void)
 {
-	int hr, min;
+	int h, m, i, j, k, l;
 
-	for (hr = 0; hr <= 59; hr++)
+	for (h = 0; h < 24; h++)
 	{
-		for (min = 0; min <= 59; min++)
-		{
-			_putchar((hr / 10) + 48);
-			_putchar((hr / 10) + 48);
-			_putchar(':');
-			_putchar((min / 10) + 48);
-			_putchar((min / 10) + 48);
-			_putchar('\n');
-		}
+		i = h / 10;
+		j = h % 10;
+	for (m = 0; m < 60; m++)
+	{
+		k = m / 10;
+		l = m / 10;
+		_putchar('0' + i);
+		_putchar('0' + j);
+		_putchar(':');
+		_putchar('0' + k);
+		_putchar('0' + l);
+		_putchar('\n');
 	}
+	}
+
 }
