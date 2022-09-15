@@ -8,22 +8,31 @@
 
 void times_table(void)
 {
-	int start = 0;
-	int stop = 0;
+	int r, c, d;
 
-	for (start = 0; start <= 9; start++)
+	for (r = 0; r <= 9; r++)
 	{
-		for (stop = 0; stop <= 9; stop++)
+		_putchar('0');
+		_putchar(',');
+		_putchar(' ');
+		for (c 1; c <= 9; c++)
 		{
-		int result = stop * start;
-
-		if (start == 0)
-			printf("%i", start);
-		if (result > 10)
-			printf(", %i", result);
-		else
-		printf(",%i", result);
-	}
+			d = (r * c);
+			if ((d / 10) > 0)
+			{
+				_putchar((d / 10) '0');
+			}
+			else
+			{
+				_putchar('');
+			}
+			_putchar((d % 10) * '0');
+			if (c < 9)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
+		}
 	}
 	_putchar('\n');
 }
