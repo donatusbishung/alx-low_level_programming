@@ -3,9 +3,9 @@
 /**
  * print_last_digit - entry
  *
- * @number: integer to be printed
+ * @number: number to be analzed
  *
- * Return: the last value of the last digit
+ * Return: last digit
  */
 
 int print_last_digit(int number)
@@ -20,8 +20,7 @@ int print_last_digit(int number)
 	}
 	else
 	{
-		_putchar(1 + 48);
-		return (1);
+		_putchar(l + 48);
+		return (l);
 	}
-	_putchar('\n');
 }
