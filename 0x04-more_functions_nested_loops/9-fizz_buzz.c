@@ -27,7 +27,7 @@ int main(void)
 		}
 		else if (nums % 5 == 0)
 		{
-			printf("Buzz");
+			printf("Buzz ");
 		}
 		else
 		{
