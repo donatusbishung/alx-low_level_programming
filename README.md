@@ -1,1 +1,1 @@
-My first commit
+Pointers and strings
