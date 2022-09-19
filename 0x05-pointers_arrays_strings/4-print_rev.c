@@ -20,7 +20,7 @@ void print_rev(char *s)
 			break;
 			number++;
 		}
-		for (number--; number >= 0)
+		for (number--; number >= 0; number--)
 		{
 			_putchar(s[number]);
 			_putchar('\n');
