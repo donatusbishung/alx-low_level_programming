@@ -16,12 +16,10 @@ void print_rev(char *s)
 	{
 		if (s[number] == '\0')
 			break;
-			number++;
+		number++;
 	}
 
 		for (number--; number >= 0; number--)
-		{
 			_putchar(s[number]);
-			_putchar('\n');
-		}
+		_putchar('\n');
 }
