@@ -22,7 +22,7 @@ void puts_half(char *str)
 	if (sen % 2 == 1)
 		a = sen / 2;
 	else
-		a = (sen -1) / 2;
+		a = (sen - 1) / 2;
 	for (a++; a < sen; a++)
 		_putchar(*(str + a));
 	_putchar('\n');
