@@ -23,6 +23,6 @@ void puts2(char *str)
 	else
 		a = (sen - 1) / 2;
 	for (a++; a < sen; a++)
-		_putchar(*(str + i));
+		_putchar(*(str + a));
 	_putchar('\n');
 }
