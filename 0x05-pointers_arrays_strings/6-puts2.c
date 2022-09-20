@@ -10,19 +10,17 @@
 
 void puts2(char *str)
 {
-	int sen = 0, a;
+	int sen = 0;
 
 	while (sen >= 0)
 	{
-		if (*(str + sen) == '\0')
+		if (str[sen] == '\0')
+		{
+			_putchar('\n');
 			break;
+		}
+		if (sen % 2 == 0)
+			_putchar(str[sen]);
 		sen++;
 	}
-	if (sen % 2 == 1)
-		a = sen / 2;
-	else
-		a = (sen - 1) / 2;
-	for (a++; a < sen; a++)
-		_putchar(*(str + a));
-	_putchar('\n');
 }
