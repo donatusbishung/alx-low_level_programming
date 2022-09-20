@@ -14,15 +14,15 @@ void puts2(char *str)
 
 	while (sen >= 0)
 	{
-		if (*(str + len) == '\0')
+		if (*(str + sen) == '\0')
 			break;
 		sen++;
 	}
-	if (len % 2 == 1)
-		i = sen / 2;
+	if (sen % 2 == 1)
+		a = sen / 2;
 	else
-		i = (sen - 1) / 2;
-	for (i++; i < sen; i++)
+		a = (sen - 1) / 2;
+	for (a++; a < sen; a++)
 		_putchar(*(str + i));
 	_putchar('\n');
 }
