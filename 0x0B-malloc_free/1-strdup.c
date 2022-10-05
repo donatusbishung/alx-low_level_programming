@@ -2,14 +2,14 @@
 #include <stdlib.h>
 
 /**
- * _strup - program with a function that returns a pointer to a
+ * _strdup - program with a function that returns a pointer to a
  * newly allocated space in memory which contains a string given as
  * a parameter.
  * @str: string
  * Return: returns NULL if insufficient space is available
  */
 
-char *_strup(char *str)
+char *_strdup(char *str)
 {
 	int i = 0, j = 0;
 	char *c;
