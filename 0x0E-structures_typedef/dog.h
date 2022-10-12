@@ -4,9 +4,9 @@
 #include <stdio.h>
 /**
  * struct dog - Defines the various members
- * @name: first input
- * @age: second input
- * @owner: third input
+ * @name: name of dog
+ * @age: age of dog
+ * @owner: owner of dog
  *
  * Return: Always 0
  */
@@ -17,4 +17,10 @@ struct dog
 	float *age;
 	char *owner;
 };
+
+int _putchar(char);
+void print_dog(struct dog *d);
+typedef struct dog dog_t;
+dog_t *new_dog(char *name, float *age, char *owner);
+void free_dog(dog_t *d);
 #endif /* DOG_H_ */
