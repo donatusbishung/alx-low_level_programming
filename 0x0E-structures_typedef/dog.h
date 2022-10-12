@@ -20,7 +20,6 @@ struct dog
 /**
  * dog_t - typedef defines new name
  */
-
 typedef struct dog dog_t;
 
 int _putchar(char);
