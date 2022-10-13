@@ -9,12 +9,12 @@
  * @size: size of array
  * @action: pointer
  *
- * Return: 0
+ * Return: void
  */
 
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
-	size_t i;
+	unsigned int a;
 
 	if (size <= 0 || array == NULL || action == NULL)
 		return;
