@@ -10,7 +10,7 @@
  * 0, or -1
  */
 
-int int_index(int *array, int size, int (*cmp))
+int int_index(int *array, int size, int (*cmp)(int))
 {
 	int i;
 
