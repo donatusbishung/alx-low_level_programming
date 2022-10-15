@@ -20,13 +20,14 @@ void print_strings(const char *seperator, const unsigned int n, ...)
 	for (i = 0; i < n; i++)
 	{
 		str = va_arg(mylist, char *);
-		if (str)
-			printf("%s", str);
-		else
+		if (str == NULL)
 			printf("(nil)");
-		if (i < n - 1 && seperator)
+		else
+			printf("%s", str);
+
+		if (seperator != NULL && i != n - 1)
 			printf("%s", seperator);
 	}
-	printf("\n");
 	va_end(mylist);
+	printf("\n");
 }

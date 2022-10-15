@@ -60,35 +60,44 @@ void print_f(va_list f)
 
 void print_all(const char * const format, ...)
 {
-	unsigned int i, j;
-	print_t p[] = {
-		{"c", print_c},
-		{"s", print_s},
-		{"i", print_i},
-		{"f", print_f},
-		{NULL, NULL},
-	};
 	va_list mylist;
-	char *separator = "";
+	unsigned int i = 0, j, c = 0;
+	char *str;
+	const char t_arg[] = "cifs";
 
 	va_start(mylist, format);
-	i = 0;
 	while (format && format[i])
 	{
-		j = 0
-	while (p[j].t != NULL)
-	{
-		if (*(p[j].t) == format[i])
+		j = 0;
+		while (t_arg[j])
 		{
-			printf("%s", separator);
-			p[j].f(mylist);
-			separator = ", ";
+		if (format[i] == t_arg[j] && c)
+		{
+			printf(", ");
 			break;
-		}
-		j++;
+		} j++;
 	}
-	i++
+	switch (format[i])
+	{
+		case 'c':
+			printf("%c", va_arg(mylist, int)), c = 1;
+			break;
+		case 'i':
+			printf("%d", va_arg(mylist, int)), c = 1;
+			break;
+		case 'f':
+			printf("%f", va_arg(mylist, double)), c = 1;
+			break;
+		case 's':
+			str = va_arg(mylist, char *), c = 1;
+			if (!str)
+			{
+				printf("nil)");
+				break;
+			}
+			printf("%s", str);
+			break;
+	} i++;
 	}
-	va_end(mylist);
-	printf("\n");
+	printf("\n"), va_end(mylist);
 }
