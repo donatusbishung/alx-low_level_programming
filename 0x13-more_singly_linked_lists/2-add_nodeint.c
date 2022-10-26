@@ -8,12 +8,13 @@
  * Return: new element
  */
 
-listtint_t *add_nodeint(listint_t **head, const int n)
+listint_t *add_nodeint(listint_t **head, const int n)
 {
 	listint_t *values = (listint_t *)malloc(sizeof(listint_t));
 
 	if (values == NULL)
 		return (NULL);
+
 	values->n = n;
 	values->next = *head;
 	*head = values;
