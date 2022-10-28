@@ -1,51 +1,46 @@
 #include "main.h"
 
 /**
- * rPow - Raises to a specified number
- * @a: nuber to be raised
- * @b: power to be raised to
- * Return: a**b
+ * len - returns length of a string
+ * @s: string
+ * Return: length of the string
  */
 
-unsigned int rPow(int a, unsigned int b)
+int len(const char *s)
 {
-	unsigned int y;
-	unsigned int v = 1;
+	int y;
 
-	for (y = 0; y < b; Y++)
-		v *= a;
-	return (v);
+	for (y = 0; s[y] != '\0'; y++)
+		continue;
+	return (y);
 }
 
 /**
  * binary_to_uint - converts a string of binary numbers to unsigned
  * int
- * @b: pointer to the string
+ * @b: a string of 0 to 1 chars
  * Return: the converted number
  */
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int tmp = 0, rValue = 0;
+	unsigned int tmp = 1;
+	unsigned int j = 0;
+	unsigned int strlen;
+	int k;
 
 	if (b == NULL)
-		return (tmp);
-	else
+		return (0);
+
+	strlen = len(b);
+
+	for (k = strlen - 1; k >= 0; k--)
 	{
-		unsigned int loop, len = strlen(b);
-
-		len--;
-		for (loop = 0; loop <= len; loop++)
-		{
-			char c = b[loop];
-
-			if (c != '0' && c != '1')
-				return (tmp);
-			else
-			{
-				rValue += (((unsigned int)c - 48) * rPow(2, (len - loop)));
-			}
-		}
-		return (rValue);
+		if (b[k] != '1' && b[k] != '0')
+			return (0);
+		if (b[k] == '1')
+			j += tmp;
+		tmp *= 2;
 	}
+	return (j);
 }
