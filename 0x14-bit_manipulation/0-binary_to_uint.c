@@ -1,20 +1,51 @@
 #include "main.h"
 
 /**
- * print_binary - function prints the binary representation
- * of a number
- * @n: unsigned long int
- * Return: 0
+ * rPow - Raises to a specified number
+ * @a: nuber to be raised
+ * @b: power to be raised to
+ * Return: a**b
  */
 
-void print_binary(unsigned long int n)
+unsigned int rPow(int a, unsigned int b)
 {
-	if (n >> 0)
-	{
-		print_binary(n >> 1);
-		_putchar((n & 1) + '0');
-	}
+	unsigned int y;
+	unsigned int v = 1;
+
+	for (y = 0; y < b; Y++)
+		v *= a;
+	return (v);
+}
+
+/**
+ * binary_to_uint - converts a string of binary numbers to unsigned
+ * int
+ * @b: pointer to the string
+ * Return: the converted number
+ */
+
+unsigned int binary_to_uint(const char *b)
+{
+	unsigned int tmp = 0, rValue = 0;
+
+	if (b == NULL)
+		return (tmp);
 	else
 	{
-		_putchar('0');
+		unsigned int loop, len = strlen(b);
+
+		len--;
+		for (loop = 0; loop <= len; loop++)
+		{
+			char c = b[loop];
+
+			if (c != '0' && c != '1')
+				return (tmp);
+			else
+			{
+				rValue += (((unsigned int)c - 48) * rPow(2, (len - loop)));
+			}
+		}
+		return (rValue);
+	}
 }
