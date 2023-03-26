@@ -3,8 +3,9 @@
 /**
  * dlistint_len - Returns the numver of elements in a dlistint_t list.
  * @h: The head of the dlistint_t list.
- * Returns: The number of elements in the list.
- * Description: This function returns only the number of elements
+ * Return: The number of elements in the list.
+ * Description: This function returns only the number of elements in a
+ * dlistint_len list.
  */
 
 size_t dlistint_len(const dlistint_t *h)
