@@ -17,15 +17,3 @@ int wildcmp(char *s1, char *s2)
 		return (wildcmp(s1, s2 + 1) || wildcmp(s1 + 1, s2));
 	return (0);
 }
-
-int main(void)
-{
-	char str1[] = "hello";
-	char str2[] = "he*lo";
-
-	if (wildcmp(str1, str2))
-		printf("strings are identical.\n");
-	else
-		printf("strings are not identical.\n");
-	return (0);
-}
