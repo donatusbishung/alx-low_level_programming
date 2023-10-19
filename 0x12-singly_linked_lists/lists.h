@@ -3,6 +3,9 @@
 
 
 #include <stddef.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 /**
  * struct list_s - linkded list (singly)
@@ -18,10 +21,6 @@ typedef struct list_s
 	struct list_s *next;
 } list_t;
 
-
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
 int _putchar(char c);
 size_t print_list(const list_t *h);
