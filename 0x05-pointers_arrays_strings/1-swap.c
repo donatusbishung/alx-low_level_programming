@@ -16,3 +16,12 @@ void swap_int(int *a, int *b)
 	*a = *b;
 	*b = c;
 }
+
+int main(void)
+{
+	int a = 3;
+	int b = 7;
+	swap_int(a, b);
+
+	printf("")
+}
